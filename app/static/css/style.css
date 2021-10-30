@@ -308,10 +308,14 @@ button.btn:hover {
 .top-news .tn-img {
     position: relative;
     overflow: hidden;
+    width: 75%;
+
 }
 
 .top-news .tn-img img {
     width: 100%;
+
+
 }
 
 .top-news .tn-img:hover img {
@@ -329,6 +333,7 @@ button.btn:hover {
     background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .3), rgba(0, 0, 0, .9));
     display: flex;
     align-items: flex-end;
+
 }
 
 .top-news .tn-content a.tn-date{
@@ -352,21 +357,36 @@ button.btn:hover {
 
 .top-news .tn-content a.tn-title {
     display: block;
-    width: 100%;
+    width: 75%;
     color: #ffffff;
     font-size: 18px;
     font-weight: 400;
     transition: .3s;
 }
 
+.top-news .tn-content a.tn-desc {
+    display: block;
+    width: 75%;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+.top-news .tn-left .tn-content a.tn-desc {
+    font-size: 15px;
+    font-weight: 700;
+}
+
 .top-news .tn-left .tn-content a.tn-title {
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 700;
 }
 
 .top-news .tn-content a.tn-title:hover {
     color: #E47A2E;
 }
+
 
 
 /**********************************/
