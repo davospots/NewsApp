@@ -14,6 +14,9 @@ def index():
     # sports category
     sports_category = newsapi.get_top_headlines(category='sports')
 
+    # technology category
+    tech_category = newsapi.get_top_headlines(category='technology')
+
     t_articles = top_headlines['articles']
 
     news = []
@@ -30,8 +33,6 @@ def index():
         img.append(main_article['urlToImage'])
         p_date.append(main_article['publishedAt'])
         url.append(main_article['url'])
-
-        contents = zip(news, desc, img, p_date, url)
 
     sports_cat = sports_category['articles']
 
@@ -50,9 +51,28 @@ def index():
         p_date_spo.append(sports_article['publishedAt'])
         url_spo.append(sports_article['url'])
 
-        sportz = zip(news_spo, desc_spo, img_spo, p_date_spo, url_spo)
+    tech_cat = tech_category['articles']
 
-    return render_template('index.html', contents=contents, sportz=sportz)
+    news_tec = []
+    desc_tec = []
+    img_tec = []
+    p_date_tec = []
+    url_tec = []
+
+    for k in range(len(tech_cat)):
+        technology_article = tech_cat[k]
+
+        news_tec.append(technology_article['title'])
+        desc_tec.append(technology_article['description'])
+        img_tec.append(technology_article['urlToImage'])
+        p_date_tec.append(technology_article['publishedAt'])
+        url_tec.append(technology_article['url'])
+
+    contents = zip(news, desc, img, p_date, url)
+    sportz = zip(news_spo, desc_spo, img_spo, p_date_spo, url_spo)
+    techy = zip(news_tec, desc_tec, img_tec, p_date_tec, url_tec)
+
+    return render_template('index.html', contents=contents, sportz=sportz, techy=techy)
 
 
 if __name__ == '__main__':
