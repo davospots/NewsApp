@@ -11,7 +11,11 @@ def index():
     # top headlines
     top_headlines = newsapi.get_top_headlines(country='ca')
 
+    # sports category
+    sports_category = newsapi.get_top_headlines(category='sports')
+
     t_articles = top_headlines['articles']
+
     news = []
     desc = []
     img = []
@@ -29,7 +33,26 @@ def index():
 
         contents = zip(news, desc, img, p_date, url)
 
-    return render_template('index.html', contents=contents)
+    sports_cat = sports_category['articles']
+
+    news_spo = []
+    desc_spo = []
+    img_spo = []
+    p_date_spo = []
+    url_spo = []
+
+    for j in range(len(sports_cat)):
+        sports_article = sports_cat[j]
+
+        news_spo.append(sports_article['title'])
+        desc_spo.append(sports_article['description'])
+        img_spo.append(sports_article['urlToImage'])
+        p_date_spo.append(sports_article['publishedAt'])
+        url_spo.append(sports_article['url'])
+
+        sportz = zip(news_spo, desc_spo, img_spo, p_date_spo, url_spo)
+
+    return render_template('index.html', contents=contents, sportz=sportz)
 
 
 if __name__ == '__main__':

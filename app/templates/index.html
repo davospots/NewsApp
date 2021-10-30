@@ -121,39 +121,19 @@
                     <div class="col-md-6">
                         <h2><i class="fas fa-align-justify"></i>Sports</h2>
                         <div class="row cn-slider">
+                            {%for title_spo,desc_spo,img_spo,p_date_spo,url_spo in sportz %}
                             <div class="col-md-6">
                                 <div class="cn-img">
-                                    <img src="img/cat-news-1.jpg" />
+                                    <img src="{{img_spo}}" />
                                     <div class="cn-content">
                                         <div class="cn-content-inner">
-                                            <a class="cn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                            <a class="cn-title" href="">Cras sed semper puru vitae lobortis velit</a>
+                                            <a class="cn-date" href=""><i class="far fa-clock"></i>{{p_date_spo}}</a>
+                                            <a class="cn-title" href="">{{title_spo}}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="cn-img">
-                                    <img src="img/cat-news-2.jpg" />
-                                    <div class="cn-content">
-                                        <div class="cn-content-inner">
-                                            <a class="cn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                            <a class="cn-title" href="">Vestibulum ante ipsum primis</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="cn-img">
-                                    <img src="img/cat-news-3.jpg" />
-                                    <div class="cn-content">
-                                        <div class="cn-content-inner">
-                                            <a class="cn-date" href=""><i class="far fa-clock"></i>05-Feb-2020</a>
-                                            <a class="cn-title" href="">Sed quis convallis lacus</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="col-md-6">
