@@ -9,7 +9,7 @@ def index():
     newsapi = NewsApiClient(api_key='599b8f291b15419aa4293f30f62920d2')
 
     # top headlines
-    top_headlines = newsapi.get_top_headlines(country='ca')
+    top_headlines = newsapi.get_top_headlines(sources='')
 
     # sports category
     sports_category = newsapi.get_top_headlines(category='sports')
