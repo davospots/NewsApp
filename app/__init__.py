@@ -27,10 +27,9 @@ def index():
         p_date.append(main_article['publishedAt'])
         url.append(main_article['url'])
 
-        contents = zip(news,desc,img,p_date,url)
+        contents = zip(news, desc, img, p_date, url)
 
-
-    return render_template('index.html')
+    return render_template('index.html', contents=contents)
 
 
 if __name__ == '__main__':
