@@ -1,8 +1,9 @@
 from flask import Flask, render_template
-
+from flask_bootstrap import Bootstrap
 from newsapi import NewsApiClient
 
 app = Flask(__name__)
+bootstrap = Bootstrap()
 
 
 @app.route('/')

@@ -1,10 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>davy</title>
-</head>
-<body>
-    <h1>this is bull</h1>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Davy-News THE BEST NEWS</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Bootstrap Ecommerce Template" name="keywords">
+        <meta content="Bootstrap Ecommerce Template Free Download" name="description">
+
+
+
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="{{url_for('static',filename = 'css/style.css')}}" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <!-- Top Header Start -->
+        <div class="top-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4">
+                        <div class="logo">
+                            <a href="">
+                                DAVY NEWS
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-4">
+                        <div class="search">
+                            <input type="text" placeholder="Search">
+                            <button><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="social">
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-facebook"></i></a>
+                            <a href=""><i class="fab fa-linkedin"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Header End -->
+
+
+        <!-- Header Start -->
+        <div class="header">
+            <div class="container">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav m-auto">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="#" class="nav-item nav-link">Sports</a>
+                            <a href="#" class="nav-item nav-link">Tech</a>
+                            <a href="single-page.html" class="nav-item nav-link">Single Page</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Top News Start-->
+        <div class="top-news ">
+            <h2><i class="fas fa-align-justify"></i>TOP NEWS</h2>
+            {%for title,desc,img,p_date,url in contents %}
+            <div class="container-fluid">
+              <div class="row">
+                  <div class="col-md-6 tn-left">
+                    <div class="tn-img">
+                        <img src="{{img}}">
+                        <div class="tn-content">
+                            <div class="tn-content-inner">
+                                <a class="tn-date" href="{{url}}"><i class="far fa-clock"></i>{{p_date}}</a>
+                                <a class="tn-title" href="{{url}}">{{title}}</a>
+                                <a class="tn-desc" href="{{url}}">{{desc}}</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Top News End-->
+
+
+        <!-- Category News Start-->
+        <div class="cat-news">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2><i class="fas fa-align-justify"></i>Sports</h2>
+                        <div class="row cn-slider">
+                            {%for title_spo,desc_spo,img_spo,p_date_spo,url_spo in sportz %}
+                            <div class="col-md-6">
+                                <div class="cn-img">
+                                    <img src="{{img_spo}}" />
+                                    <div class="cn-content">
+                                        <div class="cn-content-inner">
+                                            <a class="cn-date" href=""><i class="far fa-clock"></i>{{p_date_spo}}</a>
+                                            <a class="cn-title" href="{{url_spo}}">{{title_spo}}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2><i class="fas fa-align-justify"></i>Technology</h2>
+                        <div class="row cn-slider">
+                            {%for title_tec,desc_tec,img_tec,p_date_tec,url_tec in techy %}
+                            <div class="col-md-6">
+                                <div class="cn-img">
+                                    <img src="{{img_tec}}" />
+                                    <div class="cn-content">
+                                        <div class="cn-content-inner">
+                                            <a class="cn-date" href=""><i class="far fa-clock"></i>{{p_date_tec}}</a>
+                                            <a class="cn-title" href="{{url_tec}}">{{title_tec}}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {%endfor%}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Category News End-->
+
+
+
+
+
+
+
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3 class="title">Useful Links</h3>
+                            <ul>
+                                <li><a href="#">Pellentesque</a></li>
+                                <li><a href="#">Aliquam</a></li>
+                                <li><a href="#">Fusce placerat</a></li>
+                                <li><a href="#">Nulla hendrerit</a></li>
+                                <li><a href="#">Maecenas</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3 class="title">Quick Links</h3>
+                            <ul>
+                                <li><a href="#">Posuere egestas</a></li>
+                                <li><a href="#">Sollicitudin</a></li>
+                                <li><a href="#">Luctus non</a></li>
+                                <li><a href="#">Duis tincidunt</a></li>
+                                <li><a href="#">Elementum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3 class="title">Get in Touch</h3>
+                            <div class="contact-info">
+                                <p><i class="fa fa-map-marker"></i>Nairobi, Kenya</p>
+                                <p><i class="fa fa-envelope"></i>mathagadavid@gmail.com</p>
+                                <p><i class="fa fa-phone"></i>0726316991</p>
+                                <div class="social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook"></i></a>
+                                    <a href=""><i class="fab fa-linkedin"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3 class="title">Newsletter</h3>
+                            <div class="newsletter">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed porta dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra inceptos
+                                </p>
+                                <form>
+                                    <input class="form-control" type="email" placeholder="Your email here">
+                                    <button class="btn">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Footer Bottom Start -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 copyright">
+                        <p>Copyright &copy; <a href="https://github.com/davospots">David Mathaga</a>. All Rights Reserved</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+
+        <!-- JavaScript Libraries -->
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+
+
+        <!-- Template Javascript -->
+
+    </body>
 </html>
