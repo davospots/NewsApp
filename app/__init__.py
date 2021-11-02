@@ -5,7 +5,6 @@ from newsapi import NewsApiClient
 app = Flask(__name__)
 
 
-
 @app.route('/')
 def index():
     newsapi = NewsApiClient(api_key='599b8f291b15419aa4293f30f62920d2')
