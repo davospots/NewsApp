@@ -42,11 +42,11 @@ pip install flask
 ```
 
 ```
-chmod a+x start.sh
+
 ```
 
 ```
-./start.sh
+run __init__.py
 ```
 
 - open the browser and navigate to http://127.0.0.1:5000/ to see the application in action
