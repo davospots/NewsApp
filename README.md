@@ -40,13 +40,8 @@ curl https://bootstrap.pypa.io/get-pip.py | python
 ```
 pip install flask
 ```
-
 ```
-
-```
-
-```
-run __init__.py
+chmod a+x  __init__.py
 ```
 
 - open the browser and navigate to http://127.0.0.1:5000/ to see the application in action
