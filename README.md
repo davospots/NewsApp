@@ -60,3 +60,9 @@ The following languages have been used on this project:
 ## Setup/Installation Requirements
 
 - Live link to view the project <a target="_blank" href="https://submitnews.herokuapp.com/">View website</a>
+
+## License
+
+MIT License
+
+Copyright (c) 2021 davospots
