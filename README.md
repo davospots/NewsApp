@@ -13,7 +13,7 @@ A web application where users can view the latest news from different sources. I
 - Github
 - Flask
 - Pip
-- Python 3.10
+- Python 3.xx
 - News ApiKey (https://newsapi.org/)
 
 ## Setup Installation
